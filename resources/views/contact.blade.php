@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact</title>
+    <title>Document</title>
 </head>
 <body>
-    <a href="{{ route('contact') }}">Contact</a>
+    @extends('layout')
 
-
-
-
-
+@section('content')
+    <h1>Contact Us</h1>
+    <p>Reach out to us via email: contact@larablog.com</p>
+@endsection
 
 </body>
 </html>

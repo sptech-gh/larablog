@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
- // app/Http/Controllers/PageController.php
+    public function index() {   return view('welcome'); }
 
-    public function about() {
+
+ public function about() {
         return view('about');
     }
 
@@ -16,9 +17,7 @@ class PageController extends Controller
         return view('contact');
     }
 
-    public function showPost($id) {
-        return view('posts.show', ['id' => $id]);
-    }
+
 }
 
 
