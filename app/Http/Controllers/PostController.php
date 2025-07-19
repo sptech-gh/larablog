@@ -6,13 +6,16 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index(){
-        return view("welcome");
-    }
-        public function show($id)
+    public function index()
     {
-        $post = Post::findOrFail($id); // 404 if not found
+        $posts = \App\Models\Post::all();
+        return view('posts.index', compact('posts'));
+    }
 
+    public function show(Post $post)
+    {
         return view('posts.show', compact('post'));
     }
+
+    // Add other CRUD methods as needed
 }
